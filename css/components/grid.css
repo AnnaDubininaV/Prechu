@@ -1,0 +1,19 @@
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -10px;
+}
+
+.grid>.grid-item {
+    padding: 10px;
+}
+
+.grid-bordered .grid-item::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    background-color: #cccccc;
+    left: 0;
+    right: 0;
+}

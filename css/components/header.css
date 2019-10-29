@@ -1,0 +1,17 @@
+  .header-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
+  
+  .header .nav>.nav-item {
+      margin-right: 20px;
+  }
+  
+  .header .nav>.nav-item:last-child {
+      margin-right: 0;
+  }
+  
+  .header {
+      padding: 22px 0 15px 0;
+  }
