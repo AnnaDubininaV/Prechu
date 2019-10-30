@@ -1,7 +1,7 @@
 .section {
     position: relative;
     z-index: 0;
-    padding: 15px 0;
+    padding: 35px 0;
     text-align: center;
 }
 
@@ -47,6 +47,16 @@
     font-size: 17px;
     line-height: 40px;
     padding: 30px 0;
+}
+
+.section-hero .section-background::after {
+    content: '';
+    height: 10px;
+    width: 100%;
+    background-image: url(../../image/decore\ \(1\).png);
+    background-repeat: repeat-x;
+    position: absolute;
+    bottom: 0;
 }
 
 .section-hero .section-title {
@@ -105,15 +115,20 @@
     .section {
         text-align: left;
     }
-    .section-image {
-        align-items: center;
-    }
-    .section-title {
+    .section-shopping .section-title {
         font-size: 42px;
         text-align: center;
     }
     .section-subtitle {
         font-size: 34px;
+    }
+    .section-description {
+        font-size: 17px;
+    }
+    .section-hero .section-image>img {
+        height: auto;
+        max-height: 435px;
+        width: 100%;
     }
     .section-hero .section-title {
         font-size: 31px;
@@ -124,5 +139,46 @@
     .section-hero .button {
         font-size: 31px;
         padding: 8px 13px 12px 13px;
+    }
+}
+
+@media (min-width: 960px) {
+    .section-hero .section-body {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
+    .section-hero .section-title {
+        font-size: 42px;
+    }
+    .section-hero .section-subtitle {
+        font-size: 26px;
+    }
+    .section-hero .section-image>img {
+        height: auto;
+        min-height: 435px;
+        width: 100%;
+    }
+    .section-shopping .section-title {
+        text-align: left;
+    }
+    .section-image {
+        align-items: flex-start;
+    }
+    .section-description {
+        font-size: 15px;
+    }
+    .section-subtitle {
+        font-size: 26px;
+    }
+    .section-shopping .section-image>img {
+        max-height: 279px;
+        width: 100%;
+        margin-top: 15px;
+    }
+    .section-shopping .section-title {
+        margin-bottom: 15px;
     }
 }

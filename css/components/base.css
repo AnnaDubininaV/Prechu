@@ -16,22 +16,19 @@ html {
 .container {
     max-width: 990px;
     padding: 0 26px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 a,
 .link {
-    color: #909090;
+    color: #6c6c6c;
     text-decoration: none;
 }
 
 a:hover,
 .link:hover {
     color: #444141;
-}
-
-.a.is-active {
-    color: #009688;
-    text-decoration: underline;
 }
 
 img {
@@ -107,5 +104,8 @@ h6 {
     .logo>img {
         max-width: 208px;
         max-height: 52px;
+    }
+    .footer {
+        font-size: 15px;
     }
 }

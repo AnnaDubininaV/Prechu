@@ -1,5 +1,8 @@
 .grid {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     margin: -10px;
 }
@@ -33,5 +36,26 @@
     }
     .grid-large>.grid-item {
         padding: 30px;
+    }
+    .grid-medium {
+        margin: -25px;
+    }
+    .grid-medium>.grid-item {
+        padding: 25px;
+    }
+}
+
+@media (min-width: 940px) {
+    .grid-bordered .grid-item::after {
+        display: none;
+    }
+}
+
+@media (min-width: 1200px) {
+    .grid-large {
+        margin: -45px;
+    }
+    .grid-large>.grid-item {
+        padding: 45px;
     }
 }
