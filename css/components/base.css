@@ -102,3 +102,10 @@ h6 {
     border-top: 1px solid #e5e5e5;
     font-size: 12px;
 }
+
+@media (min-width: 640px) {
+    .logo>img {
+        max-width: 208px;
+        max-height: 52px;
+    }
+}

@@ -17,3 +17,21 @@
     left: 0;
     right: 0;
 }
+
+@media (min-width: 480px) {
+    .grid-large {
+        margin: -18px;
+    }
+    .grid-large>.grid-item {
+        padding: 18px;
+    }
+}
+
+@media (min-width: 640px) {
+    .grid-large {
+        margin: -30px;
+    }
+    .grid-large>.grid-item {
+        padding: 30px;
+    }
+}

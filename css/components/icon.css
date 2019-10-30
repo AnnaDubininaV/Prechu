@@ -38,3 +38,9 @@
 .icon-check-circle:before {
     content: "\e90b";
 }
+
+@media (min-width: 640px) {
+    .icon {
+        padding: 0 10px 8px 10px;
+    }
+}
