@@ -1,7 +1,7 @@
 .section {
     position: relative;
     z-index: 0;
-    padding: 35px 0;
+    padding: 15px 0;
     text-align: center;
 }
 
@@ -15,6 +15,7 @@
 }
 
 .section-background>img {
+    -o-object-fit: cover;
     object-fit: cover;
     height: 100%;
 }
@@ -39,6 +40,16 @@
     font-weight: 500;
 }
 
+.section-image {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    height: 100%;
+}
+
 .section-hero .container {
     max-height: 100%;
 }
@@ -47,16 +58,6 @@
     font-size: 17px;
     line-height: 40px;
     padding: 30px 0;
-}
-
-.section-hero .section-background::after {
-    content: '';
-    height: 10px;
-    width: 100%;
-    background-image: url(../../image/decore\ \(1\).png);
-    background-repeat: repeat-x;
-    position: absolute;
-    bottom: 0;
 }
 
 .section-hero .section-title {
@@ -73,14 +74,8 @@
     color: #ffffff;
 }
 
-.section-image {
-    display: flex;
-    justify-content: center;
-    height: 100%;
-}
-
 .section-image>img {
-    height: auto;
+    height: 100%;
     max-height: 223px;
     width: auto;
 }
@@ -90,9 +85,6 @@
 }
 
 @media (min-width: 480px) {
-    .section-image {
-        align-items: center;
-    }
     .section-hero {
         text-align: left;
     }
@@ -125,11 +117,24 @@
     .section-description {
         font-size: 17px;
     }
-    .section-hero .section-image>img {
+    .section-hero .section-body {
+        height: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: flex-start;
+    }
+    /* .section-hero .section-image>img {
         height: auto;
         max-height: 435px;
         width: 100%;
-    }
+    } */
     .section-hero .section-title {
         font-size: 31px;
     }
@@ -142,14 +147,26 @@
     }
 }
 
-@media (min-width: 960px) {
-    .section-hero .section-body {
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: center;
+@media (min-width: 720px) {
+    .section-hero::after {
+        content: '';
+        height: 10px;
+        width: 100%;
+        background-image: url(../../image/decore\ \(1\).png);
+        background-repeat: repeat-x;
+        position: absolute;
+        bottom: -1px;
+        left: 0;
     }
+    .section-shopping .section-subtitle {
+        text-align: center;
+    }
+    .section-shopping .section-description {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 960px) {
     .section-hero .section-title {
         font-size: 42px;
     }
@@ -161,10 +178,20 @@
         min-height: 435px;
         width: 100%;
     }
+    .section-hero .section-body {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+    .section-shopping {
+        padding: 50px 0;
+    }
     .section-shopping .section-title {
         text-align: left;
     }
     .section-image {
+        -webkit-box-align: start;
+        -ms-flex-align: start;
         align-items: flex-start;
     }
     .section-description {
@@ -176,9 +203,12 @@
     .section-shopping .section-image>img {
         max-height: 279px;
         width: 100%;
-        margin-top: 15px;
+        margin-top: 30px;
     }
     .section-shopping .section-title {
         margin-bottom: 15px;
+    }
+    .section-shopping .section-description {
+        font-size: 15px;
     }
 }
